@@ -1,0 +1,189 @@
+{
+	"projects": [
+		{
+			"class": "one",
+			"title": "UL Project Sunlight",
+			"skill": "Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "Project Sunlight involved building a site from scratch for Unilever to display information on one of there charity campaigns. The site was built on grunt task bar manager using bootstrap assemble to manage includes and json based content.<br/><br/>Unilever had strict javascript and css coding standards so it was important to adhere to those whilst building custom javascript and jquery plugins. I worked closely with the developement team along with the project and account managers to develop a start to end product.",
+					"skills": "HTML5, CSS3, Javascript, Jquery, Git, Sass, bootstrap, gulp, grunt, SVG Animation",
+					"link": "https://brightfuture.unilever.co.uk/",
+					"name" : "Project Sunlight",
+					"image" : "projectSun-home.jpg",
+					"image2": "projectSun-mobile.jpg",
+					"image3": "projectSun-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "two",
+			"title": "EE Shop",
+			"skill": "Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "EE shop project was a huge peice of work with well over 50 people working on the development of this one site. Using design/brand guidlines and a extensive UX library my job was to join a large group of developers in building the EE shop pages. The whole site was developed so it met accessibility standards and was fluidly responsive accross all browsers and modern devices. The responsive framework was one devleoped by Orange/EE and followed a 12 column grid system.<br><br>My duties on the project included creating pages and templates to fit with the UX/designs and implementing them within the responsive framework. Doing this required Javascript &amp; Jquery skills along with the ability to use other standard front-end languages such as HTML5 &amp; CSS3, SASS. The project was all hosted on Git and being able to efficiently use feature branches which working alongside a big team all developing on similar modules was very important.<br><br> At later stages of the project my role also incuded a lot of bug testing and development on legacy browser such as I.E 8, along with fully implementing accessibility requirements to custom javascript functions so they could be operational with just keyboard. Using assistive text techinques to make the website fully readable for screen readers also required a lot of work.<br><br> This project ran well over 6 months but was challenging and incredibly interesting to work on something of such a large scale",
+					"skills": "HTML5, CSS3, Jquery, Javascript, Photoshop, Git, Sass, grunt, 12 column custom grid system",
+					"link": "http://shop.ee.co.uk",
+					"name" : "EE Shop",
+					"image" : "ee-home.jpg",
+					"image2": "ee-mobile.jpg",
+					"image3": "ee-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "three",
+			"title": "Cook Food",
+			"skill": "Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "Cook is a shop website which sells ready made meal solutions made up of a large number of pages created from 5-10 different templates. The site has a fully functional product base and clear and effective built in checkout section.</br><br/>The project was designed to be a fluid responsive website which would work efficiently on desktop, tablet & mobile. To achieve this it was developed using a responsive 12 column grid system called Foundation 5. Using a grid system like this helped for rapid development purposes as the designs were also made to a 12 column grid making it a smooth transition from design to the building proccess.",
+					"skills": "Html5, CSS3, Javascript, Jquery, Foundation 5, Git, Sass, grunt, bootstrap",
+					"link": "http://www.cookfood.net",
+					"name" : "Cook Food",
+					"image" : "cook-home.jpg",
+					"image2": "cook-mobile.jpg",
+					"image3": "cook-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "four",
+			"title": "Unilever.com",
+			"skill": "Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "Unilever.com was a huge project which involved a large number of front and back end developers. The front-end of the project was built on grunt task manager using bootstrap assemble to make the markup manageable and clean, it also helped when using json based content that needed displaying. Strict coding standards with javascript and css applied so it was important to implement this across all custom javascript created.<br/><br/> I worked closely with the design and UX team on this to bring to life the site as they had imagined by using lots of css3 and SVG animations. It was fun creating the svg animations for the our logo page and learning about what the Unilever logo stands for.",
+					"skills": "Html5, CSS3, Javascript, Jquery, Foundation 5, Git, Sass, gulp, grunt",
+					"link": "http://www.unilever.com",
+					"name" : "Unilever.com",
+					"image" : "unilever-home.jpg",
+					"image2": "unilever-mobile.jpg",
+					"image3": "unilever-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "five",
+			"title": "Netduma",
+			"skill": "Design / UX / Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer / UX / Design",
+					"information": "This project was for a new router development which was being built. I designed the user interface and also did all the front-end development for this. Creating something from scratch was great fun and being able to design an interface for a product that is new in the market and never been made before made it an interesting proccess.",
+					"skills": "Html5, CSS3, Javascript, Jquery, Git, Sass, grunt, gulp, angular, inuit css",
+					"link": "http://www.netduma.com",
+					"name" : "Netduma",
+					"image" : "netduma-home.jpg",
+					"image2": "netduma-mobile.jpg",
+					"image3": "netduma-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "six",
+			"title": "Go Native",
+			"skill": "Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "Gonative involved a large scale reskin and added feature development for there ecommerce site. I working alongside 2 front-enders and one php based backend developer on this project. Updating the Gonative site was fun but challenging because a lot of the code was out dated. The site needed a task manager and a lot of the javascript redoing. Many new features were brought in along the way to accomodate to there expanding client base and desire to make the site better for usability purposes.",
+					"skills": "Html5, CSS3, Javascript, Jquery, Git, Sass, grunt, gulp",
+					"link": "http://www.gonative.com",
+					"name" : "GoNative",
+					"image" : "gonative-home.jpg",
+					"image2": "gonative-mobile.jpg",
+					"image3": "gonative-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "seven",
+			"title": "Flendr",
+			"skill": "Design / UX / Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "Flendr was a large project in itself because it included 3 websites. The brochure site, app and admin system. All of these sites were developed from scratch to create a MVP.<br/><br/>I worked closely with one backend developer and managed to whole front-end development for these sites along with UX. There were many challenges along the way with these sites as we started with nothing and had to build up a brand image with the marketing team and core investors of the product. The brochure site was build on wordpress and the app/admin system were created with C+ backend.",
+					"skills": "Html5, CSS3, Javascript, Jquery, bootstrap, Git, Sass, grunt, gulp, wordpress",
+					"link": "http://www.flendr.com",
+					"name" : "Flendr",
+					"image" : "flendr-home.jpg",
+					"image2": "flendr-mobile.jpg",
+					"image3": "flendr-tablet.jpg"
+				}
+			]
+		},
+		{
+			"class": "eight",
+			"title": "Vodafone Touchpoint",
+			"skill": "UX / Design / Front-end Development",
+			"details": [
+				{
+					"involvement" : "UX / Design",
+					"information": "This project was to build an internal based app for vodafone management teams to measure NPS Scores accross all vodafone stores worldwide. The app was made to be responsive for mobile & tablet.",
+					"skills": "Photoshop",
+					"link": "",
+					"name" : "Touchpoint NPS",
+					"image" : "vodafone1.jpg",
+					"image2": "vodafone2.jpg",
+					"image3": "vodafone3.jpg"
+				}
+			]
+		},
+		{
+			"class": "nine",
+			"title": "Betfair",
+			"skill": "Front-end Development",
+			"details": [
+				{
+					"involvement" : "Front-end Developer",
+					"information": "Betfair has mixed tasks mainly involving the promotions side of things. I had to create dynamic pages for the main betfair.com site in different areas including: casino, exchange and arcade. There promotions used the betfair API to take advantage of custom details and trends.<br/><br/>Some of the promotions incuded created small javascvript games which again worked from the user data. This was very interesting as it's not something I have done before.",
+					"skills": "Html5, CSS3, Javascript, Jquery, skeleton, Git, Sass",
+					"link": "http://www.betfair.com",
+					"name" : "Betfair",
+					"image" : "betfair-home.jpg",
+					"image2": "betfair-home1.jpg",
+					"image3": "betfair-home2.jpg"
+				}
+			]
+		}
+	],
+	"experience": [
+		{
+			"job": "Amaze",
+			"skill": "Front-end Developer",
+			"description": "Brought in to develop a new website for Unilevers 'project sunlight campaign'. The site was build on grunt task bar manager using bootstrap and assemble to generate content from json. Creating Jquery plugins along side scalebale javascript was important and adhering to strict coding standards set by the client was important. Other projects included building the new Unilver.com site and maintaing the perfume shop ecommerce site."
+		},
+		{
+			"job": "Orange Digital / EE ",
+			"skill": "Front-end Developer",
+			"description": "An exciting new project to redevelop the EE ecommerce and shop websites. Working along side a huge team of over 40 developers in an agile enviroment, liaising closely with UX and design to build up new templates, scalable javascript functions and participate in in depth usability/bug testing. Other new build projects included the cookfood.net ecommerce site."
+		},
+		{
+			"job": "Maverick Agency",
+			"skill": "Front-end Developer",
+			"description": "Development of GoNative.com. Rebuilding and skinning the current gonative website and builing in new feature enhancements. Working in a team of 10 including project managers and designers made this a fun project to get stuck into and also have some design and javascript input when it came to looking at the UX. Other projects a maverick included multiple Gibraltar AAA government websites and Sheridan Angular christmas application."
+		},
+		{
+			"job": "Flendr",
+			"skill": "Front-end Developer / Design / UX",
+			"description": "Working in a well organised digital startup funded by Liquid Business. Being the lead front-end developer in charge of all front-end developments / design and UX to create a MVP financial peer to peer lending application. Working closely with backend developers to create the look and feel of the new brochure site built on wordpress and the application it's self built on a custom C sharp backend. Heavy javascript for calculations was needed along with a well organised code structure to get the MVP out in the time schedule set."
+		},
+		{
+			"job": "Netduma",
+			"skill": "Front-end Developer, Interface design / UX",
+			"description": "Working closely with a good friends initiative router company. This new product had huge potential to be successful and has since really kicked off in the gaming industry. The main task here was to create a really cool looking gamer style interface for the router which included creating D3 javascript graphs. The design was all drawn out in photoshop and wireframing in balsamiq."
+		},
+		{
+			"job": "Betfair",
+			"skill": "Front-end Developer",
+			"description": "Working in a large team to develop new site features and also create javascript based promotional games. Adhearing to strict coding standards and working a tight agile enviroment mean't this was efficient high quality work."
+		}
+	]
+}

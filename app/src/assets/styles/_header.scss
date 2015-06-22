@@ -1,0 +1,106 @@
+header {
+	height: 63px;
+	z-index: 2;
+	position:fixed;
+	top:0px;
+	width:100%;
+	background:$dark-blue;
+	@include transition(all, .35s, ease);
+	@include translate(0px, -63px);
+	.navigation{
+		ul{
+			display: table;
+			margin: 0 auto;
+			li{
+				float: left;
+				border-bottom:3px solid $dark-blue;
+				@include transition(all, .35s, ease);
+				&.current{
+					background:lighten(#141414,4);
+					border-bottom:3px solid $primary;
+					a{
+						border: 2px solid $white;
+						color:$white;
+					}
+				}
+			}
+		}
+		.icon-container{
+			position: absolute;
+			right: 0px;
+			bottom: -60px;
+			width: 40px;
+			height: 60px;
+			margin: 0 auto;
+			cursor: pointer;
+			width: 100%;
+			background: none;
+			@include transition(all, .2s, ease);
+			&.background{
+				background:rgba(0,0,0,0.1);
+			}
+			&:hover{
+				.menu_icon:before{
+					top: 10px;
+				}
+				.menu_icon:after{
+					bottom: 10px;
+				}
+
+				@media (max-device-width: 1024px) {
+					.menu_icon:before{
+						top: 8px;
+					}
+					.menu_icon:after{
+						bottom: 8px;
+					}
+				}
+			}
+			.menu_icon {
+				position: absolute;
+				right: 20px;
+				top: 29px;
+				width: 30px;
+				height: 2px;
+				margin-left: 5px;
+				cursor: pointer;
+				@include transition(all, .35s, cubic-bezier(.545, -.440, .560, 1.540));
+				background: $white;
+				&:before, &:after {
+					position: absolute;
+					display: block;
+					width: 30px;
+					height: 2px;
+					content: '';
+					@include transition(all, .35s, cubic-bezier(.545, -.440, .560, 1.540));
+					background: $white;
+				}
+				&:before {
+					top: 8px;
+				}
+				&:after {
+					bottom: 8px;
+				}
+			}
+		}
+	}
+}
+
+.opened{
+	header{
+		@include translate(0px, 0px);
+		.navigation .icon-container .menu_icon {
+			background: transparent !important;
+			&:after {
+				bottom: 0 !important;
+				@include rotate(135);
+				background: white !important;
+			}
+			&:before {
+				top: 0 !important;
+				@include rotate(-135);
+				background: white !important;
+			}
+		}
+	}
+}

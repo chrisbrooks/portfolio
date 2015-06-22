@@ -1,0 +1,66 @@
+---
+layout: default.hbs
+class: home
+---
+
+{{>header}}
+<section class="home vertical-center section-padding fixed" id="home">
+	<div class="container">
+		<div class="logo-container">
+			<div class="icon home-icon centered no-hover"></div>
+			<h1>Chris Brooks <span class="breaker">|</span> <span class="sub-text">Web Design</span></h1>
+		</div>
+	</div>
+	<a class="arrow-down js-btn-down as-circle-none" href="#aboutme">
+		<svg width="57" height="57" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="32"></circle><line x1="20" y1="30" x2="40" y2="50"></line><line x1="40" y1="50" x2="60" y2="30"></line></svg>
+	</a>
+</section>
+<section class="me section-padding" id="aboutme">
+	<div class="container vertical-center">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+				<div class="icon post aboutme-icon no-hover centered lighter"></div>
+				<div class="info post">
+					<h2 class="header-title">Hello, i'm Chris Brooks</h2>
+					<p class="large text-center">I've been in the industry working as a front-end developer for over 7 years. I have vast experience working for clients such as EE, Orange, Unilever the NHS and many more.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a class="arrow-down js-btn-down as-circle-none hidden-xs" href="#portfolio">
+		<svg width="57" height="57" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="32"></circle><line x1="20" y1="30" x2="40" y2="50"></line><line x1="40" y1="50" x2="60" y2="30"></line></svg>
+	</a>
+</section>
+<section class="portfolio" id="portfolio">
+	<div class="project-description fixed">
+		<div class="container section-padding">
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+					<div class="icon post portfolio-icon no-hover centered lighter"></div>
+					<h2 class="header-title post">Portfolio</h2>
+					<p class="large text-center post grey">I've been in the industry working as a front-end developer for over 7 years. I have vast experience working for clients such as EE, Orange, Unilever the NHS and many more.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{>projects}}
+
+	<div class="project-details-outer-outer">
+		<div class="controls">
+			<div class="prev">
+				<svg width="50" height="50" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" style="display: inline;"><circle cx="40" cy="40" r="32"></circle><line x1="28" y1="42" x2="47" y2="25"></line><line x1="28" y1="41" x2="47" y2="58"></line></svg>
+			</div>
+			<div class="next">
+				<svg width="50" height="50" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" style="display: inline;"><circle cx="40" cy="40" r="32"></circle><line x1="33" y1="25" x2="52" y2="42"></line><line x1="33" y1="58" x2="52" y2="41"></line></svg>
+			</div>
+		</div>
+		<div class="project-details-outer">
+			<div class="container">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="experience section-padding" id="experience">
+	{{>experience}}
+</section>
+{{>footer}}

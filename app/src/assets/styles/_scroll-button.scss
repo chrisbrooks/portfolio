@@ -1,0 +1,28 @@
+.scroll-button {
+	display: none;
+	width: 60px;
+	height: 60px;
+	position:fixed;
+	right:20px;
+	bottom:20px;
+	cursor:pointer;
+	z-index:1;
+	opacity:0.5;
+	@include transition(all, .3s, ease-in-out);
+	svg{
+		display:none;
+		line {
+			stroke: $grey;
+			stroke-width: 3px;
+		}
+		circle {
+			stroke: $grey;
+			stroke-width: 3px;
+			stroke-dashoffset: 500;
+			fill: none;
+		}
+	}
+	&:hover{
+		opacity:1;
+	}
+}

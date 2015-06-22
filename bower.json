@@ -1,0 +1,12 @@
+{
+  "name": "Chris & Sophie Wedding Site",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jQuery.mmenu": "~5.2.0",
+    "jquery.lazyload": "~1.9.5",
+    "jquery.easing": "~1.3.1"
+  }
+}

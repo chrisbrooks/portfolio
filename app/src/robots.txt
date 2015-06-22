@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /designs/
+Disallow: /wordpress/
+Disallow: /random/
+
+User-agent: *
+Crawl-delay: 2
