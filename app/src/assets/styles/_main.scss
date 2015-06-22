@@ -1,7 +1,7 @@
 .home{
 	width: 100%;
 	height: 100%;
-	background: url("../images/background.jpg") $blue;
+	background: url("../images/backgrounds.jpg") $blue;
 	@include animation('opacity 1s ease-in-out alternate forwards');
 	@include keyframes(opacity) {
 		0% { opacity:0;}
@@ -97,7 +97,7 @@
 		margin: 0 auto 30px;
 	}
 	.project-description{
-		background: url("../images/background.jpg") $blue;
+		background: url("../images/backgrounds.jpg") $blue;
 	}
 	.project-container-outer{
 		width:100%;
