@@ -182,12 +182,36 @@ GLOBAL.portfolio = {
 
 	init: function(){
 
+		function datastorage(dataName) {
+			var storedData = JSON.parse(localStorage.getItem(dataName)),
+				oneDay,
+				currentTime,
+				storedTime,
+				diffDays
+
+			if (storedData) {
+				oneDay = 24 * 60 * 60 * 1000;
+				currentTime = new Date();
+				storedTime = new Date(storedData.storedTime);
+				diffDays = Math.round(Math.abs((currentTime.getTime() - storedTime.getTime()) / (oneDay)));
+			}
+
+			if (storedData && diffDays < 30) {
+				goDataGo(storedData, dataName);
+			} else {
+				ajaxcall(dataName);
+			}
+		}
+
 		function  ajaxcall(dataName) {
 			$.ajax({
 				type: 'GET',
 				url: 'data/content.json',
 				dataType: 'JSON',
 				success: function(data) {
+
+				data.storedTime = new Date();
+				localStorage.setItem(dataName, JSON.stringify(data));
 
 				var projectDetails = GLOBAL.$dom.find('.project-details'),
 				projectDetailsOuter = GLOBAL.$dom.find('.project-details-outer');
@@ -233,11 +257,11 @@ GLOBAL.portfolio = {
 
 			var results = data.projects[dataName].details[0];
 
-			if(!$('#'+ dataName +'').length){
+			if(!$('#'+ dataName +'').length && results.layout === 1){
 				GLOBAL.$dom.find('.project-details-outer').find('.container').append(
 
-					'<div class="col-xs-12 section-padding project-details" id="'+ dataName +'">
-						<div class="col-lg-offset-2 col-lg-8 col-md-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+					'<div class="row section-padding project-details" id="'+ dataName +'">
+						<div class="col-lg-offset-2 col-lg-8 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
 							<div class="icon portfolio-icon no-hover centered lighter"></div>
 							<h2 class="header-title">'+ results.name +'</h2>
 							<div class="project-info">
@@ -245,8 +269,7 @@ GLOBAL.portfolio = {
 								<p class="small">'+ results.skills +'</p>
 								<p class="small"><a href="'+ results.link +'" target="_blank">'+ results.link +'</a></p>
 							</div>
-						</div>
-						<div class="col-lg-offset-2 col-lg-8 col-md-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+
 							<div class="browser-container">
 								<span class="toolbar"></span>
 								<span class="close-browser"></span>
@@ -263,6 +286,47 @@ GLOBAL.portfolio = {
 				);
 			}
 
+			if(!$('#'+ dataName +'').length && results.layout === 2){
+				GLOBAL.$dom.find('.project-details-outer').find('.container').append(
+					'<div class="row section-padding project-details" id="'+ dataName +'">
+						<div class="col-lg-offset-2 col-lg-8 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+							<div class="icon portfolio-icon no-hover centered lighter"></div>
+							<h2 class="header-title">'+ results.name +'</h2>
+							<div class="project-info">
+								<p class="small">'+ results.information +'</p>
+								<p class="small">'+ results.skills +'</p>
+								<p class="small"><a href="'+ results.link +'" target="_blank">'+ results.link +'</a></p>
+							</div>
+
+							<div class="browser-container">
+								<span class="toolbar"></span>
+								<span class="close-browser"></span>
+								<span class="minimize-browser"></span>
+								<span class="zoom-browser"></span>
+								<img class="lazy" alt="EE Shop Home Page" data-original="images/' + results.image + '">
+							</div>
+
+							<br/><br/>
+							<div class="browser-container">
+								<span class="toolbar"></span>
+								<span class="close-browser"></span>
+								<span class="minimize-browser"></span>
+								<span class="zoom-browser"></span>
+								<img class="lazy" alt="EE Shop Home Page" data-original="images/' + results.image2 + '">
+							</div>
+							<br/><br/>
+							<div class="browser-container">
+								<span class="toolbar"></span>
+								<span class="close-browser"></span>
+								<span class="minimize-browser"></span>
+								<span class="zoom-browser"></span>
+								<img class="lazy" alt="EE Shop Home Page" data-original="images/' + results.image3 + '">
+							</div>
+						</div>
+					</div>'
+				);
+			}
+
 			GLOBAL.$dom.find('body').animate({scrollTop: $('#'+ dataName +'').offset().top}, 800, 'swing');
 			GLOBAL.$dom.find('.project-details-outer').addClass('fadeIn');
 
@@ -273,19 +337,19 @@ GLOBAL.portfolio = {
 
 		GLOBAL.$dom.find('.next').click(function(){
 			var dataName =  parseInt($('.project-details').attr('id')) + 1;
-			ajaxcall(dataName);
+			datastorage(dataName);
 			return false;
 		});
 
 		GLOBAL.$dom.find('.prev').click(function(){
 			var dataName =  parseInt($('.project-details').attr('id')) - 1;
-			ajaxcall(dataName);
+			datastorage(dataName);
 			return false;
 		});
 
 		GLOBAL.$dom.find('.project-container').find('.project').on('click', function () {
 			var dataName =  $(this).parent().index();
-			ajaxcall(dataName);
+			datastorage(dataName);
 			return false;
 		});
 	}

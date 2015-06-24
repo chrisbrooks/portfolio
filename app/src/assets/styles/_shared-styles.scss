@@ -42,9 +42,11 @@ section {
 }
 
 .section-padding{
-	padding:110px 0px;
+	padding-top:110px;
+	padding-bottom:110px;
 
 	@media (max-width: 767px) {
-		padding:60px 0px;
+		padding-top:60px;
+		padding-bottom:60px;
 	}
 }
