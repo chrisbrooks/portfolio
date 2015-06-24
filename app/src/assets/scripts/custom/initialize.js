@@ -183,7 +183,7 @@ GLOBAL.portfolio = {
 	init: function(){
 
 		function datastorage(dataName) {
-			var storedData = JSON.parse(localStorage.getItem(dataName)),
+			var storedData = JSON.parse(localStorage.getItem('site data')),
 				oneDay,
 				currentTime,
 				storedTime,
@@ -197,7 +197,7 @@ GLOBAL.portfolio = {
 			}
 
 			if (storedData && diffDays < 30) {
-				goDataGo(storedData, dataName);
+				dataSort(storedData, dataName);
 			} else {
 				ajaxcall(dataName);
 			}
@@ -211,10 +211,18 @@ GLOBAL.portfolio = {
 				success: function(data) {
 
 				data.storedTime = new Date();
-				localStorage.setItem(dataName, JSON.stringify(data));
+				localStorage.setItem('site data', JSON.stringify(data));
+				dataSort(data, dataName);
 
+			}
+			}).fail(function() {
+				console.log('ajax call failed');
+			});
+		}
+
+		function dataSort(data, dataName){
 				var projectDetails = GLOBAL.$dom.find('.project-details'),
-				projectDetailsOuter = GLOBAL.$dom.find('.project-details-outer');
+					projectDetailsOuter = GLOBAL.$dom.find('.project-details-outer');
 
 				if(projectDetails.length && $('.project-details').attr('id') != dataName){
 					projectDetails.fadeOut(300, function(){
@@ -245,12 +253,6 @@ GLOBAL.portfolio = {
 					$('.prev').fadeIn(300);
 
 				}
-
-			}
-			}).fail(function() {
-				console.log('ajax call failed');
-
-			});
 		}
 
 		function goDataGo(data, dataName) {
