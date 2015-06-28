@@ -66,6 +66,7 @@
 			content: '\e804';
 			text-align: right;
 			font-size: 46px;
+			line-height:normal;
 		}
 	}
 }
@@ -81,6 +82,10 @@
 				@media (max-width: 767px) {
 					margin-bottom:20px;
 				}
+
+				&:after{
+					line-height:normal;
+				}
 			}
 		}
 	}
@@ -93,6 +98,9 @@
 	background:$black;
 	.icon{
 		margin: 0 auto 30px;
+		&:after{
+			line-height:normal;
+		}
 	}
 	.project-description{
 		background: url("../images/backgrounds.jpg") $blue;
@@ -232,6 +240,10 @@
 
 		@media (max-width: 767px) {
 			margin-bottom:20px;
+		}
+
+		&:after{
+			line-height:normal;
 		}
 	}
 	.job{

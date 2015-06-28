@@ -40,12 +40,12 @@
 		font-variant: normal;
 		text-transform: none;
 		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		display: block;
 		text-indent: 0px;
-		position:absolute;
+		text-align:center;
+		line-height:2px;
 		font-size: 40px;
-		top: -2px;
-		left: 0px;
 	}
 	&.home-icon{
 		&:after{
