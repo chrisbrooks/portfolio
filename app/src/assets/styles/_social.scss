@@ -11,27 +11,16 @@
 				width: 20px;
 				height: 20px;
 				position: absolute;
-				left: 7px;
-				top: 8px;
 				background-size: 20px;
 			}
 			&.icon.twitter-icon:after {
-				content: '\e805';
-				font-size: 21px;
-				top: 7px;
-				left: 9px;
+				content: '\e801';
 			}
 			&.icon.facebook-icon:after {
-				content: '\e803	';
-				font-size: 22px;
-				top: 6px;
-				left: 8px;
+				content: '\e807';
 			}
 			&.icon.linkedin-icon:after {
 				content: '\e806';
-				font-size: 19px;
-				top: 7px;
-				left: 10px;
 			}
 		}
 	}

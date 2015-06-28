@@ -63,11 +63,9 @@
 			100% { opacity:1; right:0px; }
 		}
 		&:after {
-			content: '\e800';
+			content: '\e804';
 			text-align: right;
-			left: 6px;
-			top: 1px;
-			font-size: 37px;
+			font-size: 46px;
 		}
 	}
 }

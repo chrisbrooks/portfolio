@@ -5,9 +5,7 @@
 	height:40px;
 	text-indent: -9999px;
 	width: 40px;
-	border-radius: 40px;
 	display: block;
-	border: 2px solid darken($grey,20);
 	position:relative;
 	@include transition(all, .35s, ease);
 
@@ -18,7 +16,6 @@
 	&.no-hover{
 		&:hover{
 			color: $grey;
-			border: 2px solid $grey;
 		}
 	}
 	&.centered{
@@ -26,11 +23,9 @@
 	}
 	&.lighter{
 		color: $grey;
-		border: 2px solid $grey;
 	}
 	&:hover{
 		text-decoration: none;
-		border: 2px solid $white;
 		color:$white;
 	}
 	&:focus{
@@ -48,62 +43,43 @@
 		display: block;
 		text-indent: 0px;
 		position:absolute;
+		font-size: 40px;
+		top: -2px;
+		left: 0px;
 	}
 	&.home-icon{
 		&:after{
-			content: '\e800';
-			text-align: right;
-			left: 5px;
-			top: 0px;
-			font-size: 32px;
+			content: '\e804';
 		}
 	}
 	&.experience-icon{
 		&:after{
-			content: '\e802';
-			font-size: 17px;
-			top: 9px;
-			left: 10px;
+			content: '\e803';
 		}
 	}
 	&.portfolio-icon{
 		&:after{
-			content: '\e801';
-			font-size: 24px;
-			top: 5px;
-			left: 6px;
+			content: '\e802';
 		}
 	}
 	&.aboutme-icon{
 		&:after{
-			content: '\e804';
-			font-size: 19px;
-			top: 7px;
-			left: 9px;
+			content: '\e800';
 		}
 	}
 	&.linkedin-icon{
 		&:after{
 			content: '\e806';
-			font-size: 22px;
-			top: 8px;
-			left: 11px;
 		}
 	}
 	&.facebook-icon{
 		&:after{
-			content: '\e803	';
-			font-size: 24px;
-			top: 8px;
-			left: 9px;
+			content: '\e807';
 		}
 	}
 	&.twitter-icon{
 		&:after{
-			content: '\e805';
-			font-size: 21px;
-			top: 8px;
-			left: 11px;
+			content: '\e801';
 		}
 	}
 }

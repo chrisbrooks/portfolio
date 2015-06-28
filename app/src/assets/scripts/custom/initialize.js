@@ -6,8 +6,8 @@ GLOBAL.$dom = $(document);
 GLOBAL.plugins = {
 
 	lazyload: function () {
-		GLOBAL.$dom.find('img').lazyload({
-			effect : "fadeIn"
+		GLOBAL.$dom.find('img').show().lazyload({
+			effect : 'fadeIn'
 		});
 	},
 
@@ -39,7 +39,7 @@ GLOBAL.general = {
 			});
 		}
 
-		$(window).on("orientationchange",function(){
+		$(window).on('orientationchange',function(){
 			setTimeout(function(){
 				sHeight();
 			}, 10);
@@ -56,7 +56,7 @@ GLOBAL.general = {
 			}
 		}
 
-		$(window).on("orientationchange",function(){
+		$(window).on('orientationchange',function(){
 			setTimeout(function(){
 				hHeight();
 			}, 10);
@@ -120,7 +120,7 @@ GLOBAL.general = {
 
 			selector.css({
 				'opacity': opacity,
-				'bottom' : -($(this).scrollTop()/2)+"px"
+				'bottom' : -($(this).scrollTop()/2)+'px'
 			});
 
 			GLOBAL.$dom.find('.home .arrow-down').css('opacity', opacity);
@@ -138,13 +138,13 @@ GLOBAL.general = {
 
 		var container = GLOBAL.$dom.find('.project-container');
 
-		container.css("opacity", "1.0");
+		container.css('opacity', '1.0');
 
 		container.hover(function () {
 			$(this).siblings().stop().animate({'opacity': '0.6'}, 500);
 		},
 		function () {
-			container.stop().animate({'opacity': '1'}, "slow");
+			container.stop().animate({'opacity': '1'}, 'slow');
 		});
 
 	},
@@ -170,7 +170,7 @@ GLOBAL.general = {
 	},
 
 	navToggle: function(){
-		GLOBAL.$dom.find( ".icon-container" ).on( "click", function() {
+		GLOBAL.$dom.find( '.icon-container' ).on( 'click', function() {
 			GLOBAL.$dom.find('body').toggleClass('opened');
 			return false;
 		});
@@ -232,7 +232,7 @@ GLOBAL.portfolio = {
 					});
 
 				}else if(parseFloat(projectDetails.attr('id')) === dataName){
-					GLOBAL.$dom.find("body,html").animate({scrollTop: $('#'+ dataName +'').offset().top}, 800, 'swing');
+					GLOBAL.$dom.find('body,html').animate({scrollTop: $('#'+ dataName +'').offset().top}, 800, 'swing');
 
 				}else{
 					goDataGo(data, dataName);
@@ -332,8 +332,8 @@ GLOBAL.portfolio = {
 			GLOBAL.$dom.find('body').animate({scrollTop: $('#'+ dataName +'').offset().top}, 800, 'swing');
 			GLOBAL.$dom.find('.project-details-outer').addClass('fadeIn');
 
-			GLOBAL.$dom.find('img').lazyload({
-				effect : "fadeIn"
+			GLOBAL.$dom.find('img').show().lazyload({
+				effect : 'fadeIn'
 			});
 		}
 
@@ -360,26 +360,26 @@ GLOBAL.portfolio = {
 GLOBAL.ctrl = {
 	exec: function( controller, action ) {
 		var ns = GLOBAL.ctrl,
-		action = ( action === undefined ) ? "init" : action;
+		action = ( action === undefined ) ? 'init' : action;
 
-		if ( controller !== "" && ns[controller] && typeof ns[controller][action] == "function" ) {
+		if ( controller !== "" && ns[controller] && typeof ns[controller][action] == 'function' ) {
 			ns[controller][action]();
 		}
 	},
 
 	init: function() {
 		var body = document.body,
-		controller = body.getAttribute( "data-controller" ),
-		action = body.getAttribute( "data-action" );
+		controller = body.getAttribute('data-controller'),
+		action = body.getAttribute('data-action');
 
-		GLOBAL.ctrl.exec( "common" );
+		GLOBAL.ctrl.exec('common');
 		GLOBAL.ctrl.exec( controller );
 		GLOBAL.ctrl.exec( controller, action );
 	},
 
 	common: {
 		init: function() {
-			"use strict";
+			'use strict';
 			GLOBAL.portfolio.init();
 			GLOBAL.plugins.lazyload();
 			GLOBAL.plugins.onePageNav();

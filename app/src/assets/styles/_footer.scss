@@ -3,22 +3,17 @@
 	background:$blue;
 	z-index:2;
 	.footer-content{
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding:20px 0px;
 		.logo-containers {
 			a {
 				height: 40px;
 				width: 40px;
 				float: left;
-				background-size: 38px;
 				margin: 0px 0px 0px 10px;
 				cursor:pointer;
 				&.icon.home-icon:after {
-					content: '\e800';
+					content: '\e804';
 					text-align: right;
-					left: 5px;
-					top: 1px;
-					font-size: 31px;
 				}
 			}
 			p {
