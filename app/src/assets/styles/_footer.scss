@@ -6,7 +6,7 @@
 		padding:20px 0px;
 		.logo-containers {
 			a {
-				height: 40px;
+				height: 44px;
 				width: 40px;
 				float: left;
 				margin: 0px 0px 0px 10px;
@@ -14,11 +14,12 @@
 				&.icon.home-icon:after {
 					content: '\e804';
 					text-align: right;
+					line-height:normal;
 				}
 			}
 			p {
 				float: left;
-				margin-top: 10px;
+				margin:13px 0px;
 				color: darken($grey,20);
 				font-weight: 300;
 				font-size: 15px;
